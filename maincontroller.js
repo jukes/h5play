@@ -50,7 +50,7 @@ app.controller("MainController", function($scope){
 		}
 	}
 
-	$scope.continue = function(){
+	$scope.unpause = function(){
 		var currentAudio = $scope.playingAudio;
 		if(currentAudio !== null){
 			//currentAudio.pause();

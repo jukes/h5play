@@ -1,0 +1,54 @@
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+ul.playlist{
+    list-style: none; padding:0;  margin:0; 
+    background: #23241f;
+    padding: 7px;    
+    margin: 5px;
+}
+
+li.playlistItem{
+    color: #e6db74;
+}
+
+li.playlistItem:hover{
+    background-color: #75715e;    
+    cursor: default;
+}
+
+/**
+http://www.evotech.net/articles/testjsentities.html
+http://stackoverflow.com/questions/9281118/how-do-i-display-play-forward-or-solid-right-arrow-symbol-in-html
+http://www.fileformat.info/info/unicode/char/25B6/index.htm
+*/
+li.playlistItem:before {
+    content:'\25BA';
+    padding-right:7px; 
+    color: #fd9720;
+
+}
+
+li.playlistItemPause:before {
+    content:'\2759\2759';
+    font-stretch: ultra-condensed;
+    font-size: x-small;
+    padding-right:7px; 
+}
