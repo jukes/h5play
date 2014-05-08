@@ -13,14 +13,14 @@
 </head>
 <body>
     <div class="container">
-        <div id='content' ng-app='H5Play' ng-controller='MainController' class="row">
+        <div id="content" ng-app="H5Play" ng-controller="MainController" class="row">
             
             <ul class="ul playlist" ng-model='selectedTrack'>
                 <li class="li playlistItem" ng-repeat='track in playList' ng-click='play(track)'>{{track.name}}</li>
             </ul>
             
             <span class="btn btn-sm btn-primary btn-file">
-                Browse<input type="file" onchange="angular.element(this).scope().trackSelected(this)" />
+                &#10133;<input type="file" onchange="angular.element(this).scope().trackSelected(this);angular.element(this).scope().addTrack()" />
             </span>
             <button class="btn btn-sm btn-primary" ng-click="addTrack()">&#10133;</button>
             <button class="btn btn-sm btn-primary" ng-click="pause()">&#10074;&#10074;</button>
